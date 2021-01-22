@@ -10,44 +10,44 @@ class Usuario{
 
 	public function getIdusuario(){
 
-		return $this->idusuario;
+		return $this->$idusuario;
 	}
 
 	public function setIdusuario($value){
 
-		 $this->idusuario = $value;
+		return $this->$value;
 	}	
 
 	public function getDeslogin(){
 
-		return $this->deslogin;
+		return $this->$deslogin;
 	}
 
 	public function setDeslogin($value){
 
-		 $this->deslogin = $value;
+		return $this->$value;
 	}	
 
 	public function getDessenha(){	
 
-		return $this->desenha;
+		return $this->$desenha;
 
 	}
 
 	public function setDessenha($value){
 
-		$this->desenha = $value;
+		return $this->$desenha;
 	
 	}
-	public function getDtcadastro(){	
+		public function getDtcadastro(){	
 
-		return $this->dtcadastro;
+		return $this->$dtcadastro;
 
 	}
 
 	public function setDtcadastro($value){
 
-		$this->dtcadastro = $value;
+		return $this->$dtcadastro;
 	}
 
 	public function loadById($id){
@@ -75,7 +75,7 @@ class Usuario{
 			"idusuario"=>$this->getIdusuario(),
 			"deslogin"=>$this->getDeslogin(),
 			"dessenha"=>$this->getDessenha(),
-			"dtcadastro"=>$this->getDtcadastro()
+			"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
 
 		));
 
