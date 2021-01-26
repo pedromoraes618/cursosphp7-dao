@@ -2,11 +2,44 @@
 
 require_once("config.php");
 
-//carrega um usuario usando o login e a senha 
-$usuario = new usuario();
-$usuario->login("Paulo","321");
+// $usuario = new Usuario();
+// $usuario->loadById(10);
+// $usuario->delete();
+// echo $usuario;
+
+
+//alter um usuario
+$usuario = new Usuario();
+$usuario ->loadbyId(3);
+
+$usuario->update("Paulomoraes", "321654987");
 
 echo $usuario;
+
+
+
+
+
+//criando um novo usuario
+
+// 
+
+// $aluno = new Usuario();
+
+// $aluno->setDeslogin("aluno");
+
+// $aluno->setDessenha("@alunor");
+
+// $aluno->insert();
+
+// echo $aluno;
+
+
+//carrega um usuario usando o login e a senha 
+//$usuario = new usuario();
+//$usuario->login("Paulo","321");
+
+//echo $usuario;
 
 //carrega uma lista de usuario buscando pelo login
 //$search=Usuario::search("P");
